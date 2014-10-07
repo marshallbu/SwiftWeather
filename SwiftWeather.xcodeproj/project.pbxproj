@@ -13,6 +13,7 @@
 		28B222E319E34A1E006A2415 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B222E219E34A1E006A2415 /* Images.xcassets */; };
 		28B222E619E34A1E006A2415 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B222E419E34A1E006A2415 /* LaunchScreen.xib */; };
 		28B222F219E34A1E006A2415 /* SwiftWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B222F119E34A1E006A2415 /* SwiftWeatherTests.swift */; };
+		28B222FC19E395CE006A2415 /* SavedLocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B222FB19E395CE006A2415 /* SavedLocationsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		28B222EB19E34A1E006A2415 /* SwiftWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B222F019E34A1E006A2415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B222F119E34A1E006A2415 /* SwiftWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWeatherTests.swift; sourceTree = "<group>"; };
+		28B222FB19E395CE006A2415 /* SavedLocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedLocationsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				28B222DB19E34A1E006A2415 /* AppDelegate.swift */,
 				28B222DD19E34A1E006A2415 /* ViewController.swift */,
+				28B222FB19E395CE006A2415 /* SavedLocationsTableViewController.swift */,
 				28B222DF19E34A1E006A2415 /* Main.storyboard */,
 				28B222E219E34A1E006A2415 /* Images.xcassets */,
 				28B222E419E34A1E006A2415 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B222FC19E395CE006A2415 /* SavedLocationsTableViewController.swift in Sources */,
 				28B222DE19E34A1E006A2415 /* ViewController.swift in Sources */,
 				28B222DC19E34A1E006A2415 /* AppDelegate.swift in Sources */,
 			);
