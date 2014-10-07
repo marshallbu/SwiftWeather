@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         locationsButton.layer.cornerRadius = 7
+        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "translucentHeader"), forBarMetrics: UIBarMetrics.Default)
     }
 
     override func didReceiveMemoryWarning() {
