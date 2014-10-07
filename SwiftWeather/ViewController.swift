@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var currentTemperature: UILabel!
     @IBOutlet weak var currentWeather: UILabel!
+    @IBOutlet weak var locationTitle: UINavigationItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +23,20 @@ class ViewController: UIViewController {
         locationsButton.layer.cornerRadius = 7
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "translucentHeader"), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Open Sans", size: 21), NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.Black
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextViewController = segue.destinationViewController as SavedLocationsTableViewController
+        
+        nextViewController.tempLocation = locationTitle.title
     }
 
 }

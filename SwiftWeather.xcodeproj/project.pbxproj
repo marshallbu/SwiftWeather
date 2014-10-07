@@ -14,6 +14,8 @@
 		28B222E619E34A1E006A2415 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B222E419E34A1E006A2415 /* LaunchScreen.xib */; };
 		28B222F219E34A1E006A2415 /* SwiftWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B222F119E34A1E006A2415 /* SwiftWeatherTests.swift */; };
 		28B222FC19E395CE006A2415 /* SavedLocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B222FB19E395CE006A2415 /* SavedLocationsTableViewController.swift */; };
+		28B222FF19E3AD56006A2415 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28B222FD19E3AD56006A2415 /* OpenSans-Regular.ttf */; };
+		28B2230019E3AD56006A2415 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28B222FE19E3AD56006A2415 /* OpenSans-Semibold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		28B222F019E34A1E006A2415 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28B222F119E34A1E006A2415 /* SwiftWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftWeatherTests.swift; sourceTree = "<group>"; };
 		28B222FB19E395CE006A2415 /* SavedLocationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedLocationsTableViewController.swift; sourceTree = "<group>"; };
+		28B222FD19E3AD56006A2415 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		28B222FE19E3AD56006A2415 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Semibold.ttf"; path = "../OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 		28B222D919E34A1E006A2415 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28B222FD19E3AD56006A2415 /* OpenSans-Regular.ttf */,
+				28B222FE19E3AD56006A2415 /* OpenSans-Semibold.ttf */,
 				28B222DA19E34A1E006A2415 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -197,7 +203,9 @@
 			files = (
 				28B222E119E34A1E006A2415 /* Main.storyboard in Resources */,
 				28B222E619E34A1E006A2415 /* LaunchScreen.xib in Resources */,
+				28B222FF19E3AD56006A2415 /* OpenSans-Regular.ttf in Resources */,
 				28B222E319E34A1E006A2415 /* Images.xcassets in Resources */,
+				28B2230019E3AD56006A2415 /* OpenSans-Semibold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

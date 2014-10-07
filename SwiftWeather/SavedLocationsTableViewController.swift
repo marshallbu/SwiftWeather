@@ -12,6 +12,7 @@ class SavedLocationsTableViewController: UITableViewController {
     
     // a property
     var savedLocations = [String]()
+    var tempLocation: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class SavedLocationsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        savedLocations = ["Sacremento", "Chicago", "Atlanta", "Portland"]
+        savedLocations = ["Chicago", "Atlanta", "Portland"]
         
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "savedLocationsBackground"))
     }
@@ -65,6 +66,22 @@ class SavedLocationsTableViewController: UITableViewController {
             cell.backgroundColor = UIColor.clearColor()
         }
     }
+    
+    @IBAction func didPressSavedLocation(sender: AnyObject) {
+        // the ! here is telling the compiler that this optional value might not have a value, but its okay at this point
+        // TODO: find a better explanation of this
+        if !contains(savedLocations, tempLocation!) {
+            savedLocations.insert(tempLocation!, atIndex: 0)
+            println(savedLocations)
+        } else {
+            var alert = UIAlertController(title: "Duplicate Location", message: "That location is already saved.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+        self.tableView.reloadData()
+    }
+    
     
     // TODO: come back to this to explore further!
 

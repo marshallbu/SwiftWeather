@@ -3,8 +3,17 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+            <string>OpenSans</string>
+        </mutableArray>
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Sacramento-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +29,7 @@
                                 <rect key="frame" x="20" y="484" width="280" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="21"/>
                                 <state key="normal" title="Saved Locations">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,14 +41,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partly Cloudy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5b8-v5-i1q">
                                 <rect key="frame" x="120" y="333" width="175" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="82˚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZh-d6-xAz">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="82°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZh-d6-xAz">
                                 <rect key="frame" x="29" y="314" width="100" height="76"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="48"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,10 +59,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SDm-hV-vWN"/>
+                    <navigationItem key="navigationItem" title="Sacramento" id="SDm-hV-vWN"/>
                     <connections>
                         <outlet property="currentTemperature" destination="pZh-d6-xAz" id="y7k-yc-Lf0"/>
                         <outlet property="currentWeather" destination="5b8-v5-i1q" id="Qb6-wT-GDe"/>
+                        <outlet property="locationTitle" destination="SDm-hV-vWN" id="zNM-0A-jya"/>
                         <outlet property="locationsButton" destination="tjo-W2-07k" id="c0l-OU-3ex"/>
                         <outlet property="weatherIcon" destination="eIC-Fv-GxQ" id="SDY-Cy-cpx"/>
                     </connections>
@@ -62,7 +72,7 @@
             </objects>
             <point key="canvasLocation" x="754" y="431"/>
         </scene>
-        <!--Saved Locations Table View Controller-->
+        <!--Saved Locations-->
         <scene sceneID="cAo-5s-vg6">
             <objects>
                 <tableViewController id="AFV-Ng-z8J" customClass="SavedLocationsTableViewController" customModule="SwiftWeather" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +101,13 @@
                             <outlet property="delegate" destination="AFV-Ng-z8J" id="Srz-Ys-nmj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="z2r-3m-pJ9"/>
+                    <navigationItem key="navigationItem" title="Saved Locations" id="z2r-3m-pJ9">
+                        <barButtonItem key="rightBarButtonItem" image="addLocation" id="rIk-ds-TDg">
+                            <connections>
+                                <action selector="didPressSavedLocation:" destination="AFV-Ng-z8J" id="Rak-y3-jRk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ln-Dl-ruz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +138,7 @@
     </scenes>
     <resources>
         <image name="Background" width="320" height="568"/>
+        <image name="addLocation" width="17" height="17"/>
         <image name="partly-cloudy" width="226" height="174"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
