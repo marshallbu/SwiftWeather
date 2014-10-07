@@ -52,10 +52,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy" id="eIC-Fv-GxQ">
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partly-cloudy" id="eIC-Fv-GxQ">
                                 <rect key="frame" x="16" y="81" width="288" height="244"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="2iU-DU-FUf">
+                                <rect key="frame" x="142" y="412" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -63,6 +67,7 @@
                     <connections>
                         <outlet property="currentTemperature" destination="pZh-d6-xAz" id="y7k-yc-Lf0"/>
                         <outlet property="currentWeather" destination="5b8-v5-i1q" id="Qb6-wT-GDe"/>
+                        <outlet property="loadingIndicator" destination="2iU-DU-FUf" id="3J1-S9-GZw"/>
                         <outlet property="locationTitle" destination="SDm-hV-vWN" id="zNM-0A-jya"/>
                         <outlet property="locationsButton" destination="tjo-W2-07k" id="c0l-OU-3ex"/>
                         <outlet property="weatherIcon" destination="eIC-Fv-GxQ" id="SDY-Cy-cpx"/>

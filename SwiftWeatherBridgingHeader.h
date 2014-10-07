@@ -9,6 +9,6 @@
 #ifndef SwiftWeather_SwiftWeatherBridgingHeader_h
 #define SwiftWeather_SwiftWeatherBridgingHeader_h
 
-#import "AFNetworking/AFNeworking.h"
+#import "AFNetworking/AFNetworking.h"
 
 #endif
