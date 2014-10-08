@@ -35,7 +35,8 @@ class SWForecaster: NSObject, CLLocationManagerDelegate {
         
         // if its ios8
         if ( NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1 ) {
-            locationManager.requestAlwaysAuthorization()
+//            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
         }
         locationManager.startUpdatingLocation()
         //println("started updating")

@@ -17,12 +17,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var locationTitle: UINavigationItem!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    var weatherMan = SWForecaster(yourKey: "6c7ee553c3c0ad92a1bb452ebaf6ec15")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         locationsButton.layer.cornerRadius = 7
         loadingIndicator.startAnimating()
+        
+        // event listener!
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateWeatherUI:", name: "weatherHasUpdated", object: nil)
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "translucentHeader"), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Open Sans", size: 21), NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -44,7 +49,19 @@ class ViewController: UIViewController {
         // spin the loading indicator
         loadingIndicator.startAnimating()
         
+        weatherMan.locationManager.startUpdatingLocation()
+        
         // println("pressing buttons")
+    }
+    
+    func updateWeatherUI(notification: NSNotification) {
+        currentTemperature.text = weatherMan.temperatureString
+        currentWeather.text = weatherMan.weatherString
+        locationTitle.title = weatherMan.weatherLocation
+        weatherIcon.image = UIImage(named: weatherMan.weatherIcon);
+        
+        // stop the indicator
+        loadingIndicator.stopAnimating()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
